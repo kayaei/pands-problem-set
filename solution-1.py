@@ -1,7 +1,10 @@
 # Solutions to problem 1
 
-x = int(input("Please enter a positive integer: "))
-if x < 0:
-    print('That is a negative integer. Please enter a positive integer')
-else:
-    print(sum(range(1,x+1)))
+try:
+    i = int(input("Please enter a positive integer: "))
+    if i < 0:
+        print("That is not a positive integer. Please try agaion")
+    else:
+        print(sum(range(i+1)))
+except ValueError:
+    print("This is not an integer. Please try again") 
