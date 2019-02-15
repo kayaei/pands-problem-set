@@ -1,10 +1,22 @@
 # Solutions to problem 1
 
-try:
-    i = int(input("Please enter a positive integer: "))
-    if i < 0:
-        print("That is not a positive integer. Please try agaion")
+while True:
+  try:
+    i = eval(input("Please enter a positive integer: "))
+
+    if type(i) == str:
+      print("You entered a string. Please try again")
+      continue
+    elif type(i) == float:
+      print("You entered a floating number. Please try again")
+      continue
+    elif type(i) == int and i < 0:
+      print("You entered a negative integer. Please try again") 
+      continue   
     else:
-        print(sum(range(i+1)))
-except ValueError:
-    print("This is not an integer. Please try again") 
+      # Success. You entered a positve integer.
+      print("The sum is", sum(range(i+1)))
+      break  
+  except  ValueError:
+    # You did not enter a proper string or number. 
+    print("This is not an integer number at all. Please trey again")
