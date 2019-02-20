@@ -1,4 +1,4 @@
-# Solutions to problem 1
+# Solution to problem 1
 
 while True:
   try:

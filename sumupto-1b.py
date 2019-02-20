@@ -1,3 +1,5 @@
+# Solution to problem 1
+
 while True:
     try:
         # limit entries to integer numbers only.
