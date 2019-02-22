@@ -15,9 +15,9 @@ This repository contains my solutions to the Problem Set 2019 for the module "Pr
 
 ## Description of Problems and Solutions
 
-Problem 1:
+### Problem 1:
 
 Write a program that asks the user to input any positive integer and outputs the 
 sum of all numbers between one and that number.
 
-Solution 1:
+### Solution 1:
