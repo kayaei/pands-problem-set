@@ -1,25 +1,34 @@
-# Solution to problem 1
+# Etem Kaya 22-Feb-2019
+# Solution-1a: First method to Problem-1 "sumupto".
+"""
+Write a program that asks the user to input 
+any positive integer less than 100 and outputs the 
+sum of all numbers between one and that number
+"""
 
-while True:
-  try:
-    # evaluate the value entered.
-    i = eval(input("Please enter a positive integer: "))
+while True: 
+# execute the code until a positive integer with less than 3 digit entered.
+    try:
+        i = eval(input("Please enter a positive integer less than 100: ")) # evaluate the values entered.
 
-    if type(i) == str: # check a string entered.
-      print("You entered a string. Please try again.")
-      continue
-    elif type(i) == float: # check a floating number entered.
-      print("You entered a floating number. Please try again.")
-      continue
-    elif type(i) == int and i < 0: # check a negative integer entered.
-      print("You entered a negative integer. Please try again.") 
-      continue   
-    elif type(i) == int and i >= 100: # check a positive integer with more than 2 digits entered.
-      print("You entered a positive integer but more than 2 digits.")
-      print("You are only allowed max of 2 digits. Please try again.")
-    else:
-      print("The sum is", sum(range(i+1))) # sum up numbers from 0 to the number entered.
-      break  
-  except:
-    # Failure due to an unexpected value entered.
-    print("Opps, this is an unacceptable value. Please try again")
+        if type(i) == str: # check if a string value entered.
+            print("You entered a string. Please try again.")
+            continue
+        elif type(i) == float: # check if a floating number entered.
+            print("You entered a floating number. Please try again.")
+            continue
+        elif type(i) == int and i < 0: # check if a negative integer entered.
+            print("You entered a negative integer. Please try again.") 
+            continue
+        # max of 2 digit numbers allowed to prevent program crashing when large numbers entered.   
+        elif type(i) == int and i >= 100: # check if a positive integer with more than 2 digits entered.
+            print("You entered a positive integer but more than 2 digits.")
+            print("You are only allowed max of 2 digits. Please try again.")
+        else:
+            # a positive integer with less than 3 digits entered.
+            print("The sum is", sum(range(i+1))) # add numbers from 0 upto the number entered.
+            break
+
+    except: 
+    # an unacceptable value detected.
+        print("this is not a positive integer nor a string. Please try again")

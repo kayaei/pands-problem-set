@@ -1,15 +1,25 @@
-# Solution to problem 1
+# Etem Kaya 22-Feb-2019
+# Solution-1b: Second method to Problem-1 "sumupto".
+"""
+Write a program that asks the user to input 
+any positive integer less than 100 and outputs the 
+sum of all numbers between one and that number
+"""
 
 while True:
+# execute the code until a positive integer with less than 3 digit entered.
     try:
-        # limit entries to integer numbers only.
         i = int(input("Please enter a positive integer less than 100: "))
-         
-        if 0 <= i < 100: # check if a positive integer less than 100 entered.
-            print("The sum is", sum(range(i+1))) # sum up numbers from zero to the number entered.
+
+        # max of 2 digit numbers allowed to prevent program crashing when large numbers entered. 
+        if 0 <= i < 100: # check if a positive integer with less than 3 digits entered.
+            print("The sum is", sum(range(i+1))) # add numbers from 0 upto the number entered.
             break
         else:
-            print("An integer less than 0 or greater than 99 entered, please try again.")
-            continue 
+            # number entered is outside the allowed range.
+            print("A positive integer but greater than 99 or a negative integer entered, please try again.")
+            continue
+
     except:
-        print("False entry, please try again.")
+    # an unacceptable value detected.
+        print("this is not a positive integer number, please try again.")
