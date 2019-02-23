@@ -1,14 +1,9 @@
 # Problem Set 2019 - GMIT Data Analytics
 
-##### Author: Etem Kaya
-##### Project: Problem Set 2019
-##### Institution: GMIT Ireland
-##### Course: Higher Diploma in Data Analytics
-##### Module: Programming & Scripting
-##### Semester: 1
-##### Year: 2019
-##### Python Version: 3.7
-##### Date Released: 22-Feb-2019
+#### Author: Etem Kaya                             Project: Problem Set 2019
+#### Institution: GMIT Ireland                     Course: Higher Diploma in Data Analytics
+#### Module: Programming & Scripting               Year and Semester: 2019 - 1
+#### Date Released: 22-Feb-2019                    Python Version: 3.7
 
 This repository contains my solutions to the Problem Set 2019 for the module "Programming and Scripting" at GMIT.
 
