@@ -41,7 +41,7 @@ I used the the following;
 sumupto-1a.py
 
 #### References:
-https://docs.python.org/3/tutorial/errors.html#handling-exceptions 
-https://docs.python.org/3/tutorial/controlflow.html#if-statements 
-https://www.quora.com/How-do-you-check-if-a-number-is-a-float-in-Python 
-https://www.youtube.com/watch?v=jlOyXjfxEOs 
+1. https://docs.python.org/3/tutorial/errors.html#handling-exceptions 
+2. https://docs.python.org/3/tutorial/controlflow.html#if-statements 
+3. https://www.quora.com/How-do-you-check-if-a-number-is-a-float-in-Python 
+4. https://www.youtube.com/watch?v=jlOyXjfxEOs 
