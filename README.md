@@ -5,7 +5,6 @@
 #### Module: Programming & Scripting ------------------------------------------------- Year and Semester: 2019 - 1
 #### Date Released: 22-Feb-2019 --------------------------------------------------------- Software and Version: Python - Version 3.7
 
-
 This repository contains my solutions to the Problem Set 2019 for the module "Programming and Scripting" at GMIT.
 
 See this link for the instructions: (https://github.com/kayaei/pands-problem-set/blob/master/problems.pdf).
