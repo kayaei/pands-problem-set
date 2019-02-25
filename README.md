@@ -26,18 +26,42 @@ Write a program that asks the user to input any positive integer and outputs the
 and that number.
 
 ### Solution-1a
-The followings Loops, Blocks and Statements are used;
-1. 'While' loop with 'continue' and 'break' statements: I started with a 'While' loop with 'continue' and 'break' statements, because I wanted to loop back to top of the code and will continue asking a positive integer. Since the 'True' always evaluates to True, my 'While' loop will run indefinetely so keep asking a positive integer until one less than 99 is entered. I also limited the max entry for the positive integer number to 99, because in case a very large positive integer number is entered (e.g. 123456789123456789), which can increase the load on the CPU and can lead system crashes. I also used the 'continue' and 'break' statements in my 'While' loop. So with the 'continue' statement, I don't execute the rest of the code and instead go back to the 'While' loop at the top of my code and keep asking a positive integer number. This will repeat indefinetely until a positive integer number is entered which will be caught by the 'break' statement. So the 'break' statement breaks the 'While' loop when there is a match as in a positive integer less than 99 is entered so unlike the 'continue' statement which will loop back to the top of the code, the 'break' statement will stop or break the loop when a match is found (a positive integer les than 99 is entered).     
+I allow user to input anything first and then I do some sanity check on the input like evaluating what kind of value entered. I used the followings 'Loops, Blocks and Statements';
+1. The 'while' loop: I started with a 'While' loop, because I wanted to loop back to the top of the code and continue asking a positive integer until it is achieved. Since 'True' always evaluates to True, my 'While' loop will run indefinitely and keeps asking a positive integer until one less than 99 is entered. I also limited my max entry for the positive integer number to 99, because in case user inputs a very large positive integer number (e.g. 123456789123456789), it can increase the load on the CPU and can lead to system crashes. I also used the 'continue' and 'break' statements. With 'continue', the rest of the code is not  executed, so it loops back to the top to the 'while' so it keeps asking a positive integer. This will repeat indefinitely until the loop breaks with a positive integer number less than 100. The 'break' statement stops the loop when a positive integer less than 100 is inputted.     
 
-2. 'try' and 'except' Block: I used the 'try' and 'except' statements to catch and handle any exceptions with the 'While' loop so any any entries that don't form a proper numbers or strrings such as 1,33 instead of 1.33 or abcdef or @&^%%$£ with no quotes around. The code runs as normal following the 'try' statement and if an exception is detected, the response to that exception is handle after the 'except' statement, which might be generally displaying an eror message. Since my 'try' and 'except' block is within the 'While' loop, aas soon as the exception is handled after the 'except' statement, it goes back to the 'while' loop at the top and keep asking a positive integer number again. This will repeat until a positive number is entered so that the loop is broken at the 'break' statement.   
-3. 'eval', 'input', 'print', 'sum' and 'range' functions: I used 'eval' with 'input' funtions to evaluate the value entered wheter it is a stringor a negative integer or a floatign number or a positive integer with more than 2 digits etc.. With the 'print' statement, the resilt is dipalyed on the screen. The 'sum' with 'range' funtions wrapper together 'sum(range(i+1))' gives me the sum of the numbers from zero upto the number entered save me a few lines of code so I dont have to use another 'while' loop or a 'for' loop with another variable to calculate the sum. 
-4. 'if', 'elif' and 'else' statements: Like any other programming languages, the 'if' and 'else' statements are very similair and used to evaluate a condition being true or false. So I used them to evaluate the type of values entered. The 'elif' statement saved me a few lines of code so instead of having multiple 'if' statements nestes and each one witt its own 'else' statement, I used 'elif' statements and reduced the lines of code and yet achived the same result so shorten my code.
+2. The 'try' - 'except' block: I also used a 'try' and 'except' statements to catch and handle any exceptions so any entries that don't form a proper numbers or strings such as 1,33 instead of 1.33 or abcdef or @&^%%$£ with no quotes around are raised as error. The code runs as normal following the 'try' statement and if an exception is detected, the response to that exception is handled after the 'except' statement, which generally prints an error message. When the 'try' and 'except' block is finished executing the code, which means the code in the 'while True' is finished executing, the code within the 'try-except' block is executed again so user is asked to input a positive integer less than 100 again. This keeps repeating until the loop breaks at the 'break' statement when a number less than 100 is detected.
+
+3. The 'eval', 'input', 'print', 'sum' and 'range' functions: I used 'eval' with 'input' functions to evaluate the value entered whether it is a string or a negative integer or a floating number or a positive integer with more than 2 digits. With the 'print' statement, the result is displayed on the screen. The 'sum' with 'range' functions wrapped together 'sum(range(i+1))' gives me the sum of all the numbers from zero up to the number entered, which saves a few lines of code where we don't have to use another 'while' or a 'for' loop with another variable to calculate the sum.
+ 
+4. The 'if', 'elif' and 'else' statements: Like most other programming languages, the 'if' and 'else' statements are very similar in the context and used to evaluate a condition being true or false. The 'elif' statement saved me a few lines of code so instead of having multiple 'if' statements nested each one with its own 'else' statement, I used 'elif' statements to shorten the code and yet achieved the same result.
+
 
 #### File Name: 
 1. sumupto-1a.py
 
 #### References:
 1. https://docs.python.org/3/tutorial/errors.html#handling-exceptions 
-2. https://docs.python.org/3/tutorial/controlflow.html#if-statements 
-3. https://www.quora.com/How-do-you-check-if-a-number-is-a-float-in-Python 
-4. https://www.youtube.com/watch?v=jlOyXjfxEOs 
+2. https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
+3. https://docs.python.org/3/tutorial/controlflow.html#if-statements 
+4. https://www.quora.com/How-do-you-check-if-a-number-is-a-float-in-Python 
+5. https://www.youtube.com/watch?v=jlOyXjfxEOs 
+
+### Solution-1b
+This solution is a bit shorter. In this solution I disallow certain characters to be entered at a text prompt. I also used the followings Loops, Blocks and Statements;
+1. The ‘while’ loop: I started with a 'While' loop, because I wanted to loop back to the top of the code and continue asking a positive integer until it is achieved. Since 'True' always evaluates to True, my 'While' loop will run indefinitely and keeps asking a positive integer until one less than 99 is entered. I also limited my max entry for the positive integer number to 99, because in case user inputs a very large positive integer number (e.g. 123456789123456789), it can increase the load on the CPU and can lead to system crashes. I also used the 'continue' and 'break' statements. With 'continue', the rest of the code is not  executed, so it loops back to the top to the 'while' so it keeps asking a positive integer. This will repeat indefinitely until the loop breaks with a positive integer number less than 100. The 'break' statement stops the loop when a positive integer less than 100 is inputted.     
+
+2. The 'try' and 'except' block: I used it to catch and handle any exceptions so any input that is not a positive integer less than 100 raises as error. The code runs as normal following the 'try' statement and if an exception is detected, the response to that exception is handled after the 'except' statement, which generally prints an error message. When the 'try' and 'except' block is finished executing the code, which means the code in the 'while True' is finished executing, the code within the 'try-except' block is executed again and user is asked to input a positive integer less than 100 again. This keeps repeating until the loop breaks at the 'break' statement when a number less than 100 is detected.
+
+3. The 'int', 'input', 'print', 'sum' and 'range' functions are also used. I used 'int' with 'input' functions to disallow certain characters at a text prompt, so restricting user to input integer numbers only. With the 'print' statement, the result is displayed on the screen. The 'sum' with 'range' functions wrapped together 'sum(range(i+1))' gives me the sum of all the numbers from zero up to the number entered, which saves a few lines of code where we don't have to use another 'while' or a 'for' loop with another variable to calculate the sum.
+ 
+4. The 'if' and 'else' statements are also used. Like most other programming languages, the 'if' and 'else' statements are very similar in the context and used to evaluate a condition being true or false. Since it was a single ‘if’ and ‘else’ statement, I did not need to use ‘elif’ in this solution.
+
+#### File Name: 
+1. sumupto-1b.py
+
+#### References:
+1. https://docs.python.org/3/tutorial/errors.html#handling-exceptions 
+2. https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
+3. https://docs.python.org/3/tutorial/controlflow.html#if-statements  
+4. https://www.youtube.com/watch?v=jlOyXjfxEOs
+5. https://realpython.com/python-exceptions/
