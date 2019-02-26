@@ -1,9 +1,9 @@
 # Etem Kaya 22-Feb-2019
-# Solution-1a: First method to Problem-1 "sumupto".
+# Solution-1a: Problem-1 first solution - "sumupto-1a.py".
 """
-Write a program that asks the user to input 
+Problem-1: Write a program that asks the user to input 
 any positive integer less than 100 and outputs the 
-sum of all numbers between one and that number
+sum of all numbers between one and that number.
 """
 
 while True: 
