@@ -6,9 +6,11 @@ letter T. An example of running this program on a Thursday is "Yes - today begin
 An example of running it on a Wednesday is "No - today does not begin with a T.".
 """
 
-import datetime
+import datetime # import the datetime module to setup current day variable.
 
-if datetime.datetime.today().weekday() == 1 or datetime.datetime.today().weekday() == 3:
+# set curent day variable using the datetime module 
+Tday = datetime.datetime.today().strftime("%a") # convert current day varibale into a short version weekday string.
+if  Tday[0] == "T": # check if current day variable starts with letter "T" (check if the first element of current day string is "T").
   print("Yes - today begins with a T.")
 else:
   print("No - today does not begin with a T.")
