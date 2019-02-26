@@ -65,3 +65,17 @@ This solution is a bit shorter. In this solution I disallow certain characters t
 3. https://docs.python.org/3/tutorial/controlflow.html#if-statements  
 4. https://www.youtube.com/watch?v=jlOyXjfxEOs
 5. https://realpython.com/python-exceptions/
+
+### Problem-2
+
+Write a program that outputs whether or not today is a day that begins with the letter T. An example of running this program on a Thursday is "Yes - today begins with a T.".
+
+### Solution-2
+I used Pythopn's datetime function with 'if' and 'else' statements to resolve this problem.
+
+
+#### File Name: 
+1. begins-with-t.py
+
+#### References:
+1. https://docs.python.org/3/tutorial/stdlib.html#dates-and-times
