@@ -71,11 +71,13 @@ This solution is a bit shorter. In this solution I disallow certain characters t
 Write a program that outputs whether or not today is a day that begins with the letter T. An example of running this program on a Thursday is "Yes - today begins with a T.".
 
 ### Solution-2
-I used Pythopn's datetime function with 'if' and 'else' statements to resolve this problem.
-
+I used Python’s datetime module to get the current weekday first into a variable called 'Tday'. The initial value was stored in long datetime format. I then converted the value of this variable into a short version of day in string format, so instead of full string as 'Tuesday', it is stored as 'Tue'. Following this conversion, by using the 'if' and 'else' statements I checked the first element of this string to see if it was the letter "T" (began with the letter "T"), and depending on the result of this evaluation, I printed an appropriate message on the screen to say "Yes - today begins with a T." or "No - today does not begin with a T.".
 
 #### File Name: 
 1. begins-with-t.py
 
 #### References:
 1. https://docs.python.org/3/tutorial/stdlib.html#dates-and-times
+2. https://docs.python.org/3/library/datetime.html
+3. https://docs.python.org/3/library/datetime.html?highlight=strftime
+4. https://stackoverflow.com/questions/7108080/python-get-the-first-character-of-the-first-string-in-a-list
