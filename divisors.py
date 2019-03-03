@@ -8,7 +8,7 @@
 
 # counter that counts occurance of numbers divisible by 6 but not 12.
 x = 0
-for num in range(10, 100):
+for num in range(1000, 10000):
     # check if number is divisible by 6 but not 12
     if num % 6 == 0 and num % 12 != 0:
         print(num, "is a number divisible by 6 but not 12")
