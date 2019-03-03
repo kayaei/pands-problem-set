@@ -9,21 +9,23 @@
 
 # execute the code until a positive integer with less than 3 digit entered.
 while True:
-# eexecute the code between try and except block and catch any errors at the except function.
+# execute code between try - except block and catch errors at except function.
     try:
-        # declare a user input variable to integer type.
+        # declare an integer type user input variable.
         i = int(input("Please enter a positive integer less than 100: "))
 
-        # max of 2 digit numbers allowed to prevent program crashing when large numbers entered. 
-        if 0 <= i < 100: # check a positive integer with less than 3 digits entered.
-            print("The sum is", sum(range(i+1))) # add up all numbers from 0 upto the number entered.
+        # max 2 digits allowed to prevent crashes when large numbers entered. 
+        if 0 <= i < 100: # check a positive integer with less than 100 entered.
+            # add all numbers from 0 upto that number entered and display it.
+            print("The sum is", sum(range(i+1))) 
             break # terminate the loop to end the program.
+        # when number entered is outside the allowed range.
         else:
-            # number entered is outside the allowed range.
-            print("A positive integer but greater than 99 or a negative integer entered, please try again.")
+            print("A positive integer > 99 or a negative integer entered")
+            print("Please try again.")
             continue # go to while True and continue executing the code
 
     # catch any error which is not a positive integer.
     except:
     # an unacceptable value detected.
-        print("this is not a positive integer number, please try again.")
+        print("this is not a positive integer number. Please try again.")
