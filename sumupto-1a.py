@@ -9,7 +9,7 @@
 
 # execute the code until a positive integer with less than 3 digit entered.
 while True: 
-# execute the code between try and exdep block and catch errors at the except function.
+# execute the code between try and except block and catch any errors at the except function.
     try:
         # declare a user input varibale and evaluate it for tye of data to be entered.
         i = eval(input("Please enter a positive integer less than 100: "))
@@ -31,7 +31,8 @@ while True:
             # when a positive integer with less than 3 digits entered.
             print("The sum is", sum(range(i+1))) # add up all numbers from 0 upto the number entered.
             break # terminate the loop and end the program 
-
+    
+    # catch any errors that don't form proper numbers of strings.
     except: 
     # an unacceptable value detected.
         print("this is not a positive integer nor a string. Please try again")
