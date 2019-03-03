@@ -9,9 +9,9 @@
 
 # execute the code until a positive integer with less than 3 digit entered.
 while True: 
-# execute the code between try and except block and catch any errors at the except function.
+# execute code between try - except block and catch errors at except function.
     try:
-        # declare a user input varibale and evaluate it for tye of data to be entered.
+        # declare user input varibale, evaluate it for type of data entered.
         i = eval(input("Please enter a positive integer less than 100: "))
 
         if type(i) == str: # check a string value entered.
@@ -23,13 +23,15 @@ while True:
         elif type(i) == int and i < 0: # check a negative integer entered.
             print("You entered a negative integer. Please try again.") 
             continue # go to while True and continue executing the code
-        # max of 2 digit numbers allowed to prevent program crashing when large numbers entered.   
-        elif type(i) == int and i >= 100: # check a positive integer with more than 2 digits entered.
+        # max 2 digits allowed to prevent crashes when large numbers entered.
+        # check a positive integer more than 2 digits entered.   
+        elif type(i) == int and i >= 100: 
             print("You entered a positive integer but more than 2 digits.")
             print("You are only allowed max of 2 digits. Please try again.")
+        # when a positive integer with less than 3 digits entered.
         else:
-            # when a positive integer with less than 3 digits entered.
-            print("The sum is", sum(range(i+1))) # add up all numbers from 0 upto the number entered.
+            # add all numbers from 0 upto that number entered and display it.
+            print("The sum is", sum(range(i+1))) 
             break # terminate the loop and end the program 
     
     # catch any errors that don't form proper numbers of strings.
