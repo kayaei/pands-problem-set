@@ -10,9 +10,6 @@
 # Have the program end if the current value is one.
 
 def collatz(n):
-    if n == 1:
-        print("Your Input is already 1. Good bye.")
-        return
     print(n, end=' ')
     while n > 1:
         if  n % 2 == 0: # when user input is an even number.
@@ -25,15 +22,15 @@ def collatz(n):
 
 while True:
     try: 
-        n = int(input("Please enter a positive integer: ")) 
-        if n < 0: # a negative integer entered?
-            print("You entered a negative integer. Try again") 
-            continue     
+        n = int(input("Please enter a positive integer: "))    
+        if n == 1:
+            print("Your Input is already 1.")
+            break
     except ValueError: 
-        print("This is not an integer. Try again")
-
+        print("This is unaccaptable value. Run it again")
+        continue
     else:
-        print("Your Collatz Sequence is;")
+        print("Your Collatz Sequence is")
         break
 
 collatz(n)
