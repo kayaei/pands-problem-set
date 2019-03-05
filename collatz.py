@@ -22,22 +22,24 @@ def collatz(n): # define a function for collatz sequence.
             n = (n * 3) + 1 # calculate next input number.
             print(n, end=' ')
 
-while True: # alway true
+while True: # alway true loop until it breaks with user input.
     # try-except block to catch if no integer entered.
     try: 
         n = int(input("Please enter a positive integer: ")) 
         if n < 0: # a negative integer entered?
             print("You entered a negative integer. Try again.") 
-            continue # keep asking user to enter a positive integer.
-        if n == 1:
-            print("Input '1' results in '4,2,1' infinite cycle. Try again.")
-            continue # keep asking user to enter a positive integer.
+            continue # keep asking until user to enter a positive integer.
+        if n == 1: # Input '1' is not allowed due to '1, 4, 2' infinite cycle.  
+            print("Opps, input '1' has '4,2,1' infinite cycle. Try again.")
+            continue # keep asking until user to enter a positive integer.
 
-    except ValueError: # an error detected and a non integer value entered.
+    # an error detected as a non-integer value entered.
+    except ValueError: 
         print("This is not an integer. Try again.")
     else:
         # Success, a positive integer greater than 1 entered.
         print("Your Collatz Sequence is;")
         break # terminate while loop and go to collazt function.
 
-collatz(n)
+# call Collatz funtion
+collatz(n) 
