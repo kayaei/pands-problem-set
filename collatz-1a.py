@@ -12,10 +12,11 @@
 n = int(input("Please enter a positive integer: "))
 
 def collatz(n):
-    print(n, end=' ')
+    
     if n == 1:
-        print("Input is already 1")
+        print("Input '1' resuts in '4, 2, 1' infinite cycle. Try again.")
         return
+    print(n, end=' ')
     while n > 1:
         if  n % 2 == 0: # when user input is an even number.
             n = n//2 # set next user input number automatically.
