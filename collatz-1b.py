@@ -9,21 +9,10 @@
 # divide it by two, but if it is odd, multiply it by three and add one. 
 # Have the program end if the current value is one.
 
-while True:
-    try: 
-        n = int(input("Please enter a positive integer: "))    
-    except ValueError: 
-        print("This is unaccaptable value. Run it again")
-        continue
-    else: 
-        if n == 1:
-            print("Your Input is already 1.")
-            break
-    finally:
-        print("all good")
-        break
-
 def collatz(n):
+    if n == 1:
+        print("Your Input is already 1. Good bye.")
+        return
     print(n, end=' ')
     while n > 1:
         if  n % 2 == 0: # when user input is an even number.
@@ -34,5 +23,17 @@ def collatz(n):
             n = (n * 3) + 1 # set next user input number automatically.
             print(n, end=' ')
 
-collatz(n)
+while True:
+    try: 
+        n = int(input("Please enter a positive integer: ")) 
+        if n < 0: # a negative integer entered?
+            print("You entered a negative integer. Try again") 
+            continue     
+    except ValueError: 
+        print("This is not an integer. Try again")
 
+    else:
+        print("Your Collatz Sequence is;")
+        break
+
+collatz(n)
