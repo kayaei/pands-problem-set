@@ -1,6 +1,6 @@
 # Etem Kaya 03-Mar-2019
 
-# Solution to Problem-4.
+# Solution-1b to Problem-4.
 # File name: "divisors.py".
 
 # Problem-4: Write a program that asks the user to input any positive integer
