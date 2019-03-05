@@ -86,8 +86,8 @@ I used Python’s datetime module to get the current day into a variable 'Tday'.
 
 Write a program that prints all numbers between 1,000 and 10,000 that are divisible by 6 but not 12.
 
-### Solution-2
-I used a simple for loop with a range function to resolve the problem-3. In my for loop, I tested every number in my range from 1000 to 10000 to check if they csan be divisible by 6 but not 12 aty the same time. In the mean time, I counted every occurance that met the condition where the numbers in my range was divisible by 6 but not 12. The result was printed on the screen and with a final display to show the total occurrences where the above conditon was met. 
+### Solution-3
+I used a simple 'for loop' with a range function to resolve the problem-3. In my for loop, I tested every number in my range from 1000 to 10000 to check if they csan be divisible by 6 but not 12 aty the same time. In the mean time, I counted every occurance that met the condition where the numbers in my range was divisible by 6 but not 12. The result was printed on the screen and with a final display to show the total occurrences where the above conditon was met. 
 
 #### File Name: 
 1. divisors.py
