@@ -18,10 +18,10 @@ See this link for the instructions: (https://github.com/kayaei/pands-problem-set
 
 1. You need to install Python first.
 
-## Description of Problems and Solutions
+
+## Problems and Solutions
 
 ### Problem-1
-
 Write a program that asks the user to input any positive integer and outputs the sum of all numbers between one
 and that number.
 
@@ -34,7 +34,6 @@ I allow user to input anything first and then I do some sanity check on the inpu
 3. The 'eval', 'input', 'print', 'sum' and 'range' functions: I used 'eval' with 'input' functions to evaluate the value entered whether it is a string or a negative integer or a floating number or a positive integer with more than 2 digits. With the 'print' statement, the result is displayed on the screen. The 'sum' with 'range' functions wrapped together 'sum(range(i+1))' gives me the sum of all the numbers from zero up to the number entered, which saves a few lines of code where we don't have to use another 'while' or a 'for' loop with another variable to calculate the sum.
  
 4. The 'if', 'elif' and 'else' statements: Like most other programming languages, the 'if' and 'else' statements are very similar in the context and used to evaluate a condition being true or false. The 'elif' statement saved me a few lines of code so instead of having multiple 'if' statements nested each one with its own 'else' statement, I used 'elif' statements to shorten the code and yet achieved the same result.
-
 
 #### File Name: 
 1. sumupto-1a.py
@@ -66,8 +65,8 @@ This solution is a bit shorter. In this solution I disallow certain characters t
 4. https://www.youtube.com/watch?v=jlOyXjfxEOs
 5. https://realpython.com/python-exceptions/
 
-### Problem-2
 
+### Problem-2
 Write a program that outputs whether or not today is a day that begins with the letter T. An example of running this program on a Thursday is "Yes - today begins with a T.".
 
 ### Solution-2
@@ -82,8 +81,8 @@ I used Python’s datetime module to get the current day into a variable 'Tday'.
 3. https://docs.python.org/3/library/datetime.html?highlight=strftime
 4. https://stackoverflow.com/questions/7108080/python-get-the-first-character-of-the-first-string-in-a-list
 
-### Problem-3
 
+### Problem-3
 Write a program that prints all numbers between 1,000 and 10,000 that are divisible by 6 but not 12.
 
 ### Solution-3
@@ -95,3 +94,27 @@ I used a simple 'for loop' with a range function to resolve the problem-3. In my
 #### References:
 1. https://docs.python.org/3/tutorial/controlflow.html#for-statements
 2. https://docs.python.org/3/tutorial/controlflow.html#the-range-function
+
+
+### Problem-4
+Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation. At each step calculate the next value by taking the current value and, if it is even, divide it by two, but if it is odd, multiply it by three and add one. Have the program end if the current value is one.
+
+### Solution-4
+To resolve this problem, I used a number of statements, loops and functions which I learnt previously and used in my solutions to previous problems. These included 'int', 'input', 'print' along with two 'while' loops a 'try and except' block and a custom function.
+
+First I first defined my custom function to calculate the collatz sequence based on the given creteria. I used a 'while' loop within my custom function with an 'if' and 'else' statements nested. 
+Outdside my custom function 'collatz', I started with an alway true 'while' loop to eliminate inputs that are zero or negative integers which are not allowed for this collatz sequence. Within my alway true 'while' loop, I nested a 'try-except' block to detect errors when a non integer value entered. Within my 'try-except' block, I also used 'if', 'continue' and 'break' statements to check various scnerious and either continue or break the loop. Once all of the scnerious were tested and finally the predefined condition was met as user was alway forced to enter a positive integer number greater than '1', the always true 'while' loop was terminated with the 'break' statement and the custom function 'collatz' was called up to calculate the collatz numbering sequence based on the given input which met the predefined creteria (a positive integer greater than '1'). 
+
+The reason why the integer '1' is not allowed in my collatz sequence is because the '1' results in the '4, 2, 1' infinate cycle which keeps repeating the same pattern forever. Besides, '1' is the destination number that we want to reach anyway. The number '0' is excluded from the sequence because it just returns itself '0' and we can never get to '1'. All negative integers are also excluded from this collatz numbering sequence in this given problem set.  
+
+#### File Name: 
+1. collatz.py
+
+#### References:
+1. https://docs.python.org/3/tutorial/controlflow.html#defining-functions
+2. https://docs.python.org/3/tutorial/controlflow.html
+3. https://docs.python.org/3/tutorial/introduction.html#first-steps-towards-programming
+4. https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
+5. https://docs.python.org/3/tutorial/errors.html#handling-exceptions
+6. https://stackoverflow.com/a/11758128
+
