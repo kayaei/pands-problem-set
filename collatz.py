@@ -15,8 +15,7 @@ def collatz(n): # define a function for collatz sequence.
         # when user input is an even number.
         if  n % 2 == 0: 
             n = n//2 # calculate next input number automatically.
-            print(n, end=' ')
-            
+            print(n, end=' ')   
         else:
             # when user input is an odd number.
             n = (n * 3) + 1 # calculate next input number.
@@ -26,20 +25,26 @@ while True: # alway true loop until it breaks with user input.
     # try-except block to catch if no integer entered.
     try: 
         n = int(input("Please enter a positive integer: ")) 
-        if n < 0: # a negative integer entered?
+
+        # when a negative integer is entered.
+        if n < 0: 
             print("You entered a negative integer. Try again.") 
             continue # keep asking until user to enter a positive integer.
-        if n == 1: # Input '1' is not allowed due to '1, 4, 2' infinite cycle.  
-            print("Opps, input '1' has '4,2,1' infinite cycle. Try again.")
+        # when zero is entered.
+        if n == 0: 
+            print("You entered the number '0'. Try again.") 
             continue # keep asking until user to enter a positive integer.
-
+        # when integer '1' is entered.
+        if n == 1:   
+            print("Integer '1' has '4,2,1' cycle, so not allowed. Try again.")
+            continue # keep asking until user to enter a positive integer.
     # an error detected as a non-integer value entered.
     except ValueError: 
-        print("This is not an integer. Try again.")
+        print("This is not an integer value. Try again.")
+    # when a positive integer greater than 1 entered.
     else:
-        # Success, a positive integer greater than 1 entered.
         print("Your Collatz Sequence is;")
-        break # terminate while loop and go to collazt function.
+        break # terminate while loop and call up the collazt function.
 
 # call Collatz funtion
 collatz(n) 
