@@ -123,7 +123,7 @@ The reason why the integer '1' is not allowed in my collatz sequence is because 
 Write a program that asks the user to input a positive integer and tells the user whether or not the number is a prime.
 
 ### Solution-5
-To resolve this problem, I used a number of different loops like while with try-except block with varoius functions and if statements. However, after some extensive testing, I got 2 better solutions and reduced the amount of lines in my code. So finally I ended up using a 'for' loop with a custom 'function' I defined to execute the logic inside of it to check if user input is a prime number or not. I also imported the 'math' module with 'square-root' and 'floor' functions to round down the number. Overall, I used the 'int', 'input', 'print' and 'return' statements along with 2 'if' statements.
+To resolve this problem, I used a 'for' loop with a custom 'function' I defined to execute the logic inside of it to check if user input is a prime number or not. I also imported the 'math' module with 'square-root' and 'floor' functions to round down the number. Overall, I used the 'int', 'input', 'print' and 'return' statements along with 2 'if' statements.
 Firstly, I imported the 'math' module and used the 'square-root' and 'floor' functions later on in my custom function. Following that, I initiated a user input where user was asked to enter a positive integer number which was tested by the custom function whether the user input was a prime number or not. 
 I defined my custom function called 'primes' to test if user inputs were prime or not. Once my custom function was defined, I called it at the bottom of my code. So within my function, I first eliminated any integers less than 2 as they are not prime numbers. Once I passed that test (user entered an integer either equal to 2 or greater than 2), I first declared a variable called 'divisors' using the math module and its 'square-root' and 'floor' functions to calculate the max number of possible divisors for a given input. This was particularly important because there is no need to check all numbers from 2 up to the user input itself to see if they are possible divisors for the user entered number. This square-root of the user input with rounding it down if not a whole number is a common rule in maths to say it is sufficient to check only numbers up to the square-root of that given integer (which may be rounded down if not a whole number).
 
@@ -134,9 +134,11 @@ I finally initiated a 'for' loop with an 'if' statement nested. This is where I 
 
 #### References:
 1. https://docs.python.org/3/tutorial/controlflow.html#defining-functions
-2. https://docs.python.org/3/tutorial/controlflow.html
-3. https://docs.python.org/3/tutorial/introduction.html#first-steps-towards-programming
-4. https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
-5. https://docs.python.org/3/tutorial/errors.html#handling-exceptions
-6. https://stackoverflow.com/a/11758128
+2. https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
+3. https://docs.python.org/3/tutorial/modules.html
+4. https://docs.python.org/3/tutorial/controlflow.html#for-statements
+5. https://www.geeksforgeeks.org/python-program-to-check-whether-a-number-is-prime-or-not/
+6. https://www.programiz.com/python-programming/examples/prime-number
+7. https://beginnersbook.com/2018/01/python-program-check-prime-or-not/
+
 
