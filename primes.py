@@ -6,23 +6,24 @@
 # Problem-5: Write a program that asks the user to input a positive integer
 # and tells the user whether or not the number is a prime.
 
-# promt user to input a positive integer number.
-n = int(input("Please enter a positive integer: "))
-
-# import math function
+# import math module to use square-root and round-down functions.
 import math
+
+# prompt user to input a positive integer number.
+n = int(input("Please enter a positive integer: "))
 
 # define a function to check user input is prime or not.
 def prime(n): 
-    # any integer < 2 not prime
+    # check if number is < 2
     if n < 2: 
         print(n, "is not a prime.")  
         return
-    # use math and square root with round down functions to find_
+
+    # use math module with square-root and floor functions to find_
     # possible number of divisors for the given input n.
     divisors = math.floor(math.sqrt(n))
 
-    # loop to check only odd numbers from 3 up to the floor of square root of n.
+    # loop to check only odd numbers from 3 up to the floor of square-root of n.
     for x in range(2, divisors + 1):
         # odd number and > 2 but has divisors other than 1 and self.
         if n % x == 0:   
