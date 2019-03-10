@@ -29,7 +29,7 @@ while True: # alway true until it breaks with user input.
                 if n % x == 0:   
                     print(n, "is not a prime.")
                     break # terminate while loop.
-                else:
-                    print(n, "is a prime.")
-                    break # terminate while loop.
+            else:
+                print(n, "is a prime.")
+                break # terminate while loop.
     break # terminate while loop.
