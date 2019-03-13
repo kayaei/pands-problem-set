@@ -142,3 +142,22 @@ I finally initiated a 'for' loop with an 'if' statement nested. This is where I 
 7. https://beginnersbook.com/2018/01/python-program-check-prime-or-not/
 
 
+### Problem-6
+Write a program that takes a user input string and outputs every second word.
+
+### Solution-6
+To resolve this problem, I used the str.split() and str.join() functions of the string data type. First I got user to input a sentence, then I got this sentence split by every second word starting from the index zero. This means that the sentence is split by the elements that have the even index numbers like 0, 2, 4, 6 etc. So those elements with odd index numbers dropped from the list e.g. 1, 3, 5, etc. Then, these remaining words with even index numbers are joined to make a new sentence but a single space between each word as before and no single or double quotation around the words. And finally the result as in the new sentence was display on the screen. 
+
+I initialy started with a 'for' loop to check the lenght of the sentence and print only the even numbered words but that was more than 4 lines of code, where as this new solution is much shorter as i only use 2 lines of code with split and join both in a single line.  
+
+#### File Name: 
+1. secondstring.py
+
+#### References:
+1. https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
+2. https://docs.python.org/3/tutorial/introduction.html#strings
+3. https://docs.python.org/2.3/whatsnew/section-slices.html
+4. https://www.programiz.com/python-programming/methods/string/join
+5. https://stackoverflow.com/a/47085609
+6. https://stackoverflow.com/a/12883445
+
