@@ -7,7 +7,8 @@
 
 My_sentence = "this is a funny cheese shop but there is no mice in this shop"
 
-My_sentence = My_sentence.split()[::2]
-print(My_sentence)
+# My_sentence = My_sentence.split()[::2]
+# print(My_sentence)
 # print(My_sentence.split()[::2])
-', '.join(list(My_sentence))
+# print(' '.join(My_sentence))
+print(' '.join(My_sentence.split()[::2]))
