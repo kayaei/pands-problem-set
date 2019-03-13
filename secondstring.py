@@ -5,7 +5,7 @@
 
 # Problem-6: Write a program that takes a user input string and outputs every second word.
 
-My_sentence = "this is a funny cheese shop but there is no mice in this shop"
+My_sentence = str(input("Please enter a sentence: "))
 
 # My_sentence = My_sentence.split()[::2]
 # print(My_sentence)
