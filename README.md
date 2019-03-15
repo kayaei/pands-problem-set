@@ -161,3 +161,29 @@ I initialy started with a 'for' loop to check the lenght of the sentence and pri
 5. https://stackoverflow.com/a/47085609
 6. https://stackoverflow.com/a/12883445
 
+
+### Problem-7
+Write a program that that takes a positive floating point number as input and outputs an approximation of its square root.
+
+### Solution-7
+To resolve this problem, I started with a 'While' loop, because I wanted to loop back to the top of the code and continue asking to enter a positive floating-point number (inclusive of number zero). While 'True' is always True, my 'While' loop will run indefinitely and keeps asking a positive floating number until it is entered. I also used the 'continue' and 'break' statements within my While loop. 
+
+With 'continue', the rest of the code is skipped, so it loops back to the top to the 'while True' and keeps asking a positive floating-point number. This will repeat indefinitely until the loop breaks when a positive floating-point number is entered so the result can be calculated. The 'break' statement stops the loop when the result is calculated and printed on the screen.    
+After a value is entered by the user, with an if statement it is checked whether it is a negative number or not. If it is then a message is displayed on the screen to alert the user that this was a negative number so to try again so it loops back to the While True and will keep asking user to enter a positive floating number again. Once a positive number is entered (doesn't matter a float or an integer), it then asks user to enter a second number which is to be our initial estimate to calculate the square root of the first number entered. Once a second number is entered (negative number are permitted), it goes to another While loop to calculate the approx. square root of the first number entered. In this loop I used the Newton's square root approximation method which is widely available on the internet.   
+
+Within my While True (always true) loop, I used the 'try-except' block to catch and handle any exceptions like input that is non numeric values like string or special characters etc. The code runs as normal following the 'try' statement and if an exception is detected (a non-numeric value is detected), the response to that exception is handled after the 'except' statement, which prints an error message. Then it goes back to the to the While True loop and executes the 'try-except' block again to ask user to input a positive number. This keeps repeating until the loop breaks at the 'break' statement when a number the result  (approx. square root) is calculated and displayed on the screen.
+The goal of the Newton's square root approximation method is to calculate the approximate square root of the given number using the initial estimate given. There is also an accuracy constant of '0.01' used in the loop. This helps the accuracy of the square root as in how close we can get to the actual square root.
+
+Note: Instead of Newton's square root approximation method, python's the built-in 'math.sqrt( x )' function can be used by importing the math module first ('import math').
+ 
+#### File Name: 
+1. squareroot.py
+
+#### References:
+1. https://tour.golang.org/flowcontrol/8
+2. https://docs.python.org/3/tutorial/errors.html#handling-exceptions
+3. https://docs.python.org/3/tutorial/introduction.html#first-steps-towards-programming
+4. https://docs.python.org/3/tutorial/controlflow.html#if-statements
+5. https://stackoverflow.com/a/48438631
+6. https://www.rookieslab.com/posts/finding-square-root-using-guess-and-check-algorithm-in-python
+
