@@ -11,5 +11,7 @@
 # import datetime module
 import datetime as dt
 
+# set a variable fro today's date and time
 t = dt.datetime.now()
+# print today's date and time.
 print(t)
