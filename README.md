@@ -187,3 +187,26 @@ Note: Instead of Newton's square root approximation method, python's the built-i
 5. https://stackoverflow.com/a/48438631
 6. https://www.rookieslab.com/posts/finding-square-root-using-guess-and-check-algorithm-in-python
 
+
+### Problem-8
+Write a program that outputs today’s date and time in the format ”Monday, January 10th 2019 at 1:15pm”.
+
+### Solution-8
+To resolve this problem, I first imported the 'datetime' module. I then called the 'strftime' method from the 'datetime' module to convert today's date and time into the format requested. With the 'strftime' method, I used the following legal codes;
+%A = Weekday, long version, e.g. Wednesday
+%B = Month name, long version, e.g. December
+%d = Day of month (01-31), e.g. 31
+%Y = Year, long version, e.g. 2018
+%I = Hour 00-12 (12 hour clock), e.g. 05
+%M = Minute 00-59, e.g. 41
+%p = AM/PM, e.g. PM
+
+Note: I had to change the file name from'datetime.py' to 'datetime-1.py' as my python interpretor didn't like the first name so it constantly generated errors for the datetime module saying that the 'datetime' module has noattribute 'datetime'. So I changed thefile name with 1 at the end to resolve the issue.
+ 
+#### File Name: 
+1. datetime-1.py
+
+#### References:
+1. https://www.w3schools.com/python/python_datetime.asp
+2. https://docs.python.org/3/library/datetime.html
+3. https://docs.python.org/3/tutorial/stdlib.html#dates-and-times
