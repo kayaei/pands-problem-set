@@ -6,6 +6,7 @@
 # Problem-7: Write a program that that takes a positive floating point number
 # as input and outputs an approximation of its square root.
 
+# Always true loop until the result is found.
 while True:
     try:
         # The number to calculate the square root of.
@@ -27,7 +28,8 @@ while True:
 
         # Print the result.
         print(f"The square root of {rootof} is approx. {estimate}.")
-        break
+        break # terminate the loop
 
+    # detect when no numeric value entered.
     except ValueError:
         print("This is not a floating point number. Try again")
