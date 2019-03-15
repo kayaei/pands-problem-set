@@ -6,12 +6,8 @@
 # Problem-8: Write a program that outputs today’s date and time in the format
 # ”Monday, January 10th 2019 at 1:15pm”.
 
-# import datetime module to get the current date.
-
-# import datetime module
+# import datetime module to check the current date.
 import datetime as dt
 
-# set a variable fro today's date and time
-t = dt.datetime.now()
-# print today's date and time.
-print(t)
+# print current date and time in the format of "Monday, January 10th 2019 at 1:15pm". 
+print(dt.datetime.today().strftime("%A, %B %dth %Y at %I:%M%p"))
