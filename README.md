@@ -216,11 +216,12 @@ Note: I had to change the file name from'datetime.py' to 'datetime-1.py' as my p
 Write a program that reads in a text file and outputs every second line. The program should take the filename from an argument on the command line.
 
 ### Solution-9
-To resolve this problem, I first pointed out the directory where the text file was located (hardcoded the path) in the file open statement. The using the file 'readlines. command, all the lines were assigned to a new variable called 'line' to use it in a 'for' loop later in the code. I then initiated a 'for' loop to go though a number range with 3 sets of parameters;
-start = index 0, which means the line zero
-stop = 'len(line)' function which gives the total number of lines of the text book
-step = constant 2, which means starting from line zero, keep every second line (stepping through every second line like 0, 2, 4, 6, etc.).
-Finally the result was displayed on the screen and then the text file was closed.
+To resolve this problem, I first pointed out the directory where the text file was located (hardcoded the path) in the file open statement. The using the file 'readlines' command, all the lines were ead and assigned to a new variable called 'lines' so to use them in a 'for' loop later in the code. I then initiated a 'for' loop to go though a number range with 3 sets of parameters;
+start = index 0, which means start with line zero
+stop = 'len(lines)' which gives the total number of lines of the text book
+step = constant 2, which means jump to every second line like 0, 2, 4, 6, etc.).
+Finally using the 'print' function, every second line was printed on the screen. In order to remove those empty lines (e.g. 1, 3, 5, etc.) between the even second lines, I used the end="" function to remove them.
+Because we used a 'with' function to open the file, the file is automatically closed at the end of the code once the result is achived and displayed on the screen so we don't have to write a 'f.close()' command in our code to close the file. 
  
 #### File Name: 
 1. second.py-1.py
