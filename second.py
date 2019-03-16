@@ -8,18 +8,16 @@
 
 
 # open a text file containing first paragraph of Moby-Dick book in read-only mode.
-text_file = open('C:\\Users\\etemk\\Desktop\\pands-problem-set\\moby-dick.txt', 'r')
+with open('C:\\Users\\etemk\\Desktop\\pands-problem-set\\moby-dick.txt', 'r') as f:
 
-# assign the lines of the text file to a new variable called 'lines'.
-line = text_file.readlines()
+    # assign lines of the text file to a new variable called 'lines'.
+    lines = f.readlines()
 
-# loop through every second line of the text file starting from line zero,
-# then increment by 2 like 0, 2, 4, 6, etc.
-for i in range(0, len(line), 2):
-    
-    # print every second line of the file starting from index zero.
-    print (line[i])
+    # looping through the every second line of the text file, but start_
+    # from line zero then increment by 2 so lines 0, 2, 4, 6, etc.
+    for i in range(0, len(lines), 2):
+        
+        # print every second line of the file starting from line zero.
+        print(lines[i], end='')
 
-# close the file.
-text_file.close()
 print("\n \nThe file is now closed. Goodbye.")
