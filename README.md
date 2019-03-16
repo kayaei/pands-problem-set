@@ -210,3 +210,23 @@ Note: I had to change the file name from'datetime.py' to 'datetime-1.py' as my p
 1. https://www.w3schools.com/python/python_datetime.asp
 2. https://docs.python.org/3/library/datetime.html
 3. https://docs.python.org/3/tutorial/stdlib.html#dates-and-times
+
+
+### Problem-9
+Write a program that reads in a text file and outputs every second line. The program should take the filename from an argument on the command line.
+
+### Solution-9
+To resolve this problem, I first pointed out the directory where the text file was located (hardcoded the path) in the file open statement. The using the file 'readlines. command, all the lines were assigned to a new variable called 'line' to use it in a 'for' loop later in the code. I then initiated a 'for' loop to go though a number range with 3 sets of parameters;
+start = index 0, which means the line zero
+stop = 'len(line)' function which gives the total number of lines of the text book
+step = constant 2, which means starting from line zero, keep every second line (stepping through every second line like 0, 2, 4, 6, etc.).
+Finally the result was displayed on the screen and then the text file was closed.
+ 
+#### File Name: 
+1. second.py-1.py
+
+#### References:
+1. https://www.w3schools.com/python/python_file_open.asp
+2. https://www.datacamp.com/community/tutorials/reading-writing-files-python
+3. https://stackoverflow.com/a/22567865
+4. https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
