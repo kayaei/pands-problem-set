@@ -224,10 +224,31 @@ Finally using the 'print' function, every second line was printed on the screen.
 Because we used a 'with' function to open the file, the file is automatically closed at the end of the code once the result is achived and displayed on the screen so we don't have to write a 'f.close()' command in our code to close the file. 
  
 #### File Name: 
-1. second.py-1.py
+1. second.py.py
 
 #### References:
 1. https://www.w3schools.com/python/python_file_open.asp
 2. https://www.datacamp.com/community/tutorials/reading-writing-files-python
 3. https://stackoverflow.com/a/22567865
 4. https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
+
+
+### Problem-10
+Write a program that displays a plot of the functions x, x2 and 2x in the range [0, 4].
+
+### Solution-10
+To resolve this problem, I imported both 'numpy' and 'matplotlib' packages as they are very useful for plotting datasets. I first setup the scale and length of x axis using the 'arange' function of the numpy package (np.arange(0.0, 4.0, 0.5)). I then defined the following functions;
+f(x) = y1 = x
+f(x^2) = y2 = x**2
+f(2^x) = y3 = 2**x
+Using the 'plt' function of the 'matplotlib' package, I setup the plotting for those 3 functions. I also setup 2 pionts where these functions (y1, y2 and y3) will intersect and mark these point where they intersect with orange and blue colours. I turned on the grid line visibility to display both horizantal and vertical lines. I also setup the plot legends for each line and their locations purely for display purposes.
+Finally, I plotted these f(x), f(x^2) and f(2^x) functions (y1, y2 and y3) on a single graph using the line chart where their intersect points marked blue and orange.
+ 
+#### File Name: 
+1. plotfunction.py
+
+#### References:
+1. https://matplotlib.org/users/pyplot_tutorial.html
+2. http://courses.csail.mit.edu/6.867/wiki/images/3/3f/Plot-python.pdf
+3. https://realpython.com/python-matplotlib-guide/
+4. https://glowingpython.blogspot.com/2011/04/how-to-plot-function-using-matplotlib.html
