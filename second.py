@@ -7,19 +7,19 @@
 # The program should take the filename from an argument on the command line.
 
 
-# open the text file containing first paragraph of Moby-Dick book in read-only mode.
+# open a text file containing first paragraph of Moby-Dick book in read-only mode.
 text_file = open('C:\\Users\\etemk\\Desktop\\pands-problem-set\\moby-dick.txt', 'r')
 
-# assign every lines of the text file to a new variable called 'lines'.
+# assign the lines of the text file to a new variable called 'lines'.
 line = text_file.readlines()
 
-# loop through every second line of the text file 'moby-dick.txt',
-# starting from line zero then increment by 2 so every second line.
+# loop through every second line of the text file starting from line zero,
+# then increment by 2 like 0, 2, 4, 6, etc.
 for i in range(0, len(line), 2):
     
-    # print every second line of the text file starting from index zero.
+    # print every second line of the file starting from index zero.
     print (line[i])
 
 # close the file.
 text_file.close()
-print("\nThe file is now closed. Goodbye.")
+print("\n \nThe file is now closed. Goodbye.")
