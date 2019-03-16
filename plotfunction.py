@@ -6,7 +6,7 @@
 # Problem-10: Write a program that displays a plot of the functions x, x2 & 2x
 # in the range [0, 4].
 
-#Import matploylib and numpy packages 
+#Import matplotlib and numpy packages 
 import matplotlib.pyplot as plt
 import numpy as np
 
