@@ -238,9 +238,9 @@ Write a program that displays a plot of the functions x, x2 and 2x in the range 
 
 ### Solution-10
 To resolve this problem, I imported both 'numpy' and 'matplotlib' packages as they are very useful for plotting datasets. I first setup the scale and length of x axis using the 'arange' function of the numpy package (np.arange(0.0, 4.0, 0.5)). I then defined the following functions;
-f(x) = y1 = x
-f(x^2) = y2 = x**2
-f(2^x) = y3 = 2**x
+f(x) = y1 = x, 
+f(x^2) = y2 = x**2, 
+f(2^x) = y3 = 2**x. 
 Using the 'plt' function of the 'matplotlib' package, I setup the plotting for those 3 functions. I also setup 2 pionts where these functions (y1, y2 and y3) will intersect and mark these point where they intersect with orange and blue colours. I turned on the grid line visibility to display both horizantal and vertical lines. I also setup the plot legends for each line and their locations purely for display purposes.
 Finally, I plotted these f(x), f(x^2) and f(2^x) functions (y1, y2 and y3) on a single graph using the line chart where their intersect points marked blue and orange.
  
