@@ -27,7 +27,7 @@ and that number.
 
 ### Solution-1a
 I allow user to input anything first and then I do some sanity check on the input like evaluating what kind of value entered. I used the followings 'Loops, Blocks and Statements';
-1. The 'while' loop: I started with a 'While' loop, because I wanted to loop back to the top of the code and continue asking a positive integer until it is achieved. Since 'True' always evaluates to True, my 'While' loop will run indefinitely and keeps asking a positive integer until one less than 99 is entered. I also limited my max entry for the positive integer number to 99, because in case user inputs a very large positive integer number (e.g. 123456789123456789), it can increase the load on the CPU and can lead to system crashes. I also used the 'continue' and 'break' statements. With 'continue', the rest of the code is not  executed, so it loops back to the top to the 'while' so it keeps asking a positive integer. This will repeat indefinitely until the loop breaks with a positive integer number less than 100. The 'break' statement stops the loop when a positive integer less than 100 is inputted.     
+1. The 'while' loop: I started with a 'While' loop, because I wanted to loop back to the top of the code and continue asking a positive integer until it is achieved. Since 'True' always evaluates to True, my 'While' loop will run indefinitely and keeps asking a positive integer until one less than 99 is entered. I also limited my max entry for the positive integer number to 99, because in case user inputs a very large positive integer number (e.g. 123456789123456789), it can increase the load on the CPU and can lead to system crashes. I also used the 'continue' and 'break' statements. With 'continue', the rest of the code is not  executed, so it loops back to the top to the 'while' so it keeps asking a positive integer. This will repeat indefinitely until the loop breaks with a positive integer number less than 100. The 'break' statement stops the loop when a positive integer less than 100 is inputted.
 
 2. The 'try' - 'except' block: I also used a 'try' and 'except' statements to catch and handle any exceptions so any entries that don't form a proper numbers or strings such as 1,33 instead of 1.33 or abcdef or @&^%%$£ with no quotes around are raised as error. The code runs as normal following the 'try' statement and if an exception is detected, the response to that exception is handled after the 'except' statement, which generally prints an error message. When the 'try' and 'except' block is finished executing the code, which means the code in the 'while True' is finished executing, the code within the 'try-except' block is executed again so user is asked to input a positive integer less than 100 again. This keeps repeating until the loop breaks at the 'break' statement when a number less than 100 is detected.
 
@@ -47,7 +47,7 @@ I allow user to input anything first and then I do some sanity check on the inpu
 
 ### Solution-1b
 This solution is a bit shorter. In this solution I disallow certain characters to be entered at a text prompt. I also used the followings Loops, Blocks and Statements;
-1. The ‘while’ loop: I started with a 'While' loop, because I wanted to loop back to the top of the code and continue asking a positive integer until it is achieved. Since 'True' always evaluates to True, my 'While' loop will run indefinitely and keeps asking a positive integer until one less than 99 is entered. I also limited my max entry for the positive integer number to 99, because in case user inputs a very large positive integer number (e.g. 123456789123456789), it can increase the load on the CPU and can lead to system crashes. I also used the 'continue' and 'break' statements. With 'continue', the rest of the code is not  executed, so it loops back to the top to the 'while' so it keeps asking a positive integer. This will repeat indefinitely until the loop breaks with a positive integer number less than 100. The 'break' statement stops the loop when a positive integer less than 100 is inputted.     
+1. The ‘while’ loop: I started with a 'While' loop, because I wanted to loop back to the top of the code and continue asking a positive integer until it is achieved. Since 'True' always evaluates to True, my 'While' loop will run indefinitely and keeps asking a positive integer until one less than 99 is entered. I also limited my max entry for the positive integer number to 99, because in case user inputs a very large positive integer number (e.g. 123456789123456789), it can increase the load on the CPU and can lead to system crashes. I also used the 'continue' and 'break' statements. With 'continue', the rest of the code is not  executed, so it loops back to the top to the 'while' so it keeps asking a positive integer. This will repeat indefinitely until the loop breaks with a positive integer number less than 100. The 'break' statement stops the loop when a positive integer less than 100 is inputted.
 
 2. The 'try' and 'except' block: I used it to catch and handle any exceptions so any input that is not a positive integer less than 100 raises as error. The code runs as normal following the 'try' statement and if an exception is detected, the response to that exception is handled after the 'except' statement, which generally prints an error message. When the 'try' and 'except' block is finished executing the code, which means the code in the 'while True' is finished executing, the code within the 'try-except' block is executed again and user is asked to input a positive integer less than 100 again. This keeps repeating until the loop breaks at the 'break' statement when a number less than 100 is detected.
 
@@ -194,13 +194,13 @@ Write a program that outputs today’s date and time in the format ”Monday, Ja
 ### Solution-8
 To resolve this problem, I first imported the 'datetime' module. Then I read today's full date and time into a variable called 't_day'. Subsequent to this, using the 'strftime' method from the 'datetime' module, I also read the 'day of the month' as integer into a new variable called 'd_month'. I then used this 'd_month' variable in my subsequent if and elif statements to determine what suffix I would need to add to the day of the month for display. So first I checked the day of the month and compared it against numbers in 3 tuples like (1, 21, 31) or (2, 22) or (3, 33) or the rest of the remaining days from a 31 day long calender month to find out where the day of the month was found. Depending on the result, one of these 4 possible string values ('st' or 'nd' or 'rd' or 'th') was asigned to a new variable called 'd_suffix' which was added after the day of the month when displayed on the screen.
 I then converted today's date and time into the format requested and printed on the screen using the print function. With the 'strftime' method, I used the following legal codes;
-%A = Weekday, long version, e.g. Wednesday
-%B = Month name, long version, e.g. December
-%d = Day of month (01-31), e.g. 31
-%Y = Year, long version, e.g. 2018
-%I = Hour 00-12 (12 hour clock), e.g. 05
-%M = Minute 00-59, e.g. 41
-%p = AM/PM, e.g. PM
+1. %A = Weekday, long version, e.g. Wednesday
+2. %B = Month name, long version, e.g. December
+3. %d = Day of month (01-31), e.g. 31
+4. %Y = Year, long version, e.g. 2018
+5. %I = Hour 00-12 (12 hour clock), e.g. 05
+6. %M = Minute 00-59, e.g. 41
+7. %p = AM/PM, e.g. PM
 
 Note: I had to change the file name from'datetime.py' to 'datetime-1.py' as my python interpretor didn't like the first name as it generated error for the datetime module saying that the 'datetime' module has no attribute 'datetime'. So I changed the file name with number 1 at the end to resolve the issue.
  
@@ -223,7 +223,7 @@ start = index 0, which means start with line zero
 stop = 'len(lines)' which gives the total number of lines of the text book
 step = constant 2, which means jump to every second line like 0, 2, 4, 6, etc.).
 Finally using the 'print' function, every second line was printed on the screen. In order to remove those empty lines (e.g. 1, 3, 5, etc.) between the even second lines, I used the end="" function to remove them.
-Because we used a 'with' function to open the file, the file is automatically closed at the end of the code once the result is achived and displayed on the screen so we don't have to write a 'f.close()' command in our code to close the file. 
+Because we used a 'with' function to open the file, the file is automatically closed at the end of the code once the result is achived and displayed on the screen so we don't have to write a 'f.close()' command in our code to close the file.
  
 #### File Name: 
 1. second.py.py
