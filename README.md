@@ -192,7 +192,8 @@ Note: Instead of Newton's square root approximation method, python's the built-i
 Write a program that outputs today’s date and time in the format ”Monday, January 10th 2019 at 1:15pm”.
 
 ### Solution-8
-To resolve this problem, I first imported the 'datetime' module. I then called the 'strftime' method from the 'datetime' module to convert today's date and time into the format requested. With the 'strftime' method, I used the following legal codes;
+To resolve this problem, I first imported the 'datetime' module. Then I read today's full date and time into a variable called 't_day'. Subsequent to this, using the 'strftime' method from the 'datetime' module, I also read the 'day of the month' as integer into a new variable called 'd_month'. I then used this 'd_month' variable in my subsequent if and elif statements to determine what suffix I would need to add to the day of the month for display. So first I checked the day of the month and compared it against numbers in 3 tuples like (1, 21, 31) or (2, 22) or (3, 33) or the rest of the remaining days from a 31 day long calender month to find out where the day of the month was found. Depending on the result, one of these 4 possible string values ('st' or 'nd' or 'rd' or 'th') was asigned to a new variable called 'd_suffix' which was added after the day of the month when displayed on the screen.
+I then converted today's date and time into the format requested and printed on the screen using the print function. With the 'strftime' method, I used the following legal codes;
 %A = Weekday, long version, e.g. Wednesday
 %B = Month name, long version, e.g. December
 %d = Day of month (01-31), e.g. 31
@@ -201,7 +202,7 @@ To resolve this problem, I first imported the 'datetime' module. I then called t
 %M = Minute 00-59, e.g. 41
 %p = AM/PM, e.g. PM
 
-Note: I had to change the file name from'datetime.py' to 'datetime-1.py' as my python interpretor didn't like the first name so it constantly generated errors for the datetime module saying that the 'datetime' module has noattribute 'datetime'. So I changed thefile name with 1 at the end to resolve the issue.
+Note: I had to change the file name from'datetime.py' to 'datetime-1.py' as my python interpretor didn't like the first name as it generated error for the datetime module saying that the 'datetime' module has no attribute 'datetime'. So I changed the file name with number 1 at the end to resolve the issue.
  
 #### File Name: 
 1. datetime-1.py
