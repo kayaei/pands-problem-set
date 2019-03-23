@@ -226,7 +226,7 @@ Finally using the 'print' function, every second line was printed on the screen.
 Because we used a 'with' function to open the file, the file is automatically closed at the end of the code once the result is achived and displayed on the screen so we don't have to write a 'f.close()' command in our code to close the file.
  
 #### File Name: 
-1. second.py.py
+1. second.py
 
 #### References:
 1. https://www.w3schools.com/python/python_file_open.asp
