@@ -218,12 +218,13 @@ Note: I had to change the file name from'datetime.py' to 'datetime-1.py' as my p
 Write a program that reads in a text file and outputs every second line. The program should take the filename from an argument on the command line.
 
 ### Solution-9
-To resolve this problem, I first pointed out the directory where the text file was located (hardcoded the path) in the file open statement. The using the file 'readlines' command, all the lines were ead and assigned to a new variable called 'lines' so to use them in a 'for' loop later in the code. I then initiated a 'for' loop to go though a number range with 3 sets of parameters;
-start = index 0, which means start with line zero
-stop = 'len(lines)' which gives the total number of lines of the text book
-step = constant 2, which means jump to every second line like 0, 2, 4, 6, etc.).
-Finally using the 'print' function, every second line was printed on the screen. In order to remove those empty lines (e.g. 1, 3, 5, etc.) between the even second lines, I used the end="" function to remove them.
-Because we used a 'with' function to open the file, the file is automatically closed at the end of the code once the result is achived and displayed on the screen so we don't have to write a 'f.close()' command in our code to close the file.
+To resolve this problem, I imported the 'sys' library which I needed the 'sys.argv' function. Then I used a 'try and except' block to handle any file error exception by raising an error. To do that I used the 'OSError' except statement to catch any file errors such as wrong file name supplied or file not existed in the first place etc. Within the 'try-except' block, using an 'if' statement I first check the lenght of the argument supplied through the command-line and see the number of arguments (how many files) supplied. If 2 files supplied (a second file supplied through the command-line argument other than the python script file itself), then using the 'with' statement I accessed this second file as 'f'. Subsequent to this, using the file 'readlines' command, all of the lines of this file assigned to a variable called 's' so to use in my 'for' loop. I then initiated my 'for' loop to loop through numbers in a range with 3 step parameters;
+start = index 0, which is the start with line zero in the file.
+stop = 'len(s)' which is the total number of lines of the text file.
+step = constant 2 is the jump between line so starting from line zero, jump to every second line like 0, 2, 4, 6, etc.).
+
+Finally using the 'print' function, every second line was printed on the screen. In order to remove those empty lines (e.g. 1, 3, 5, etc.) between the every second lines, I used the end="" function to remove them. If however, there was no file supplied through the command-line argument other than the python script file itself, I then jumped to the else statement and using the 'print' function, I displayed a message for the user to indicate that a single text file (other than the python script file) to be supplied and ended the program.
+Note: Because we used a 'with' function to access the file, we didn't need to close the file with the 'f.close()' command in our code as it was automatically closed at the end of the code when the result was achived and displayed on the screen.
  
 #### File Name: 
 1. second.py
@@ -231,8 +232,10 @@ Because we used a 'with' function to open the file, the file is automatically cl
 #### References:
 1. https://www.w3schools.com/python/python_file_open.asp
 2. https://www.datacamp.com/community/tutorials/reading-writing-files-python
-3. https://stackoverflow.com/a/22567865
+3. https://stackoverflow.com/q/22567785
 4. https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
+5. https://docs.python.org/3/library/sys.html?highlight=sys%20argv#sys.argv
+6. https://www.pythonforbeginners.com/system/python-sys-argv
 
 
 ### Problem-10
