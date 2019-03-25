@@ -18,53 +18,27 @@ See this link for the instructions: (https://github.com/kayaei/pands-problem-set
 
 1. You need to install Python first.
 
-
 ## Problems and Solutions
 
 ### Problem-1
 Write a program that asks the user to input any positive integer and outputs the sum of all numbers between one
 and that number.
 
-### Solution-1a
-I allow user to input anything first and then I do some sanity check on the input like evaluating what kind of value entered. I used the followings 'Loops, Blocks and Statements';
-1. The 'while' loop: I started with a 'While' loop, because I wanted to loop back to the top of the code and continue asking a positive integer until it is achieved. Since 'True' always evaluates to True, my 'While' loop will run indefinitely and keeps asking a positive integer until one less than 99 is entered. I also limited my max entry for the positive integer number to 99, because in case user inputs a very large positive integer number (e.g. 123456789123456789), it can increase the load on the CPU and can lead to system crashes. I also used the 'continue' and 'break' statements. With 'continue', the rest of the code is not  executed, so it loops back to the top to the 'while' so it keeps asking a positive integer. This will repeat indefinitely until the loop breaks with a positive integer number less than 100. The 'break' statement stops the loop when a positive integer less than 100 is inputted.
+### Solution-1
+In this solution I disallow certain characters to be entered. I also used the followings Loops, Blocks and Statements;
+The ‘while’ loop: I started with a 'While' loop, because I wanted to loop back to the top of the code and continue asking a positive integer until it is achieved. Since 'True' always evaluates to True, my 'While' loop will run indefinitely and keeps asking a positive integer until one less than 99 is entered. I also limited my max entry for the positive integer number to 99, because in case user inputs a very large positive integer number (e.g. 123456789123456789), it can increase the load on the CPU and can lead to system crashes. I also used the 'continue' and 'break' statements. With 'continue', the rest of the code is not  executed, so it loops back to the top to the 'while' so it keeps asking a positive integer. This will repeat indefinitely until the loop breaks with a positive integer number less than 100. The 'break' statement stops the loop when a positive integer less than 100 is inputted.
 
-2. The 'try' - 'except' block: I also used a 'try' and 'except' statements to catch and handle any exceptions so any entries that don't form a proper numbers or strings such as 1,33 instead of 1.33 or abcdef or @&^%%$£ with no quotes around are raised as error. The code runs as normal following the 'try' statement and if an exception is detected, the response to that exception is handled after the 'except' statement, which generally prints an error message. When the 'try' and 'except' block is finished executing the code, which means the code in the 'while True' is finished executing, the code within the 'try-except' block is executed again so user is asked to input a positive integer less than 100 again. This keeps repeating until the loop breaks at the 'break' statement when a number less than 100 is detected.
-
-3. The 'eval', 'input', 'print', 'sum' and 'range' functions: I used 'eval' with 'input' functions to evaluate the value entered whether it is a string or a negative integer or a floating number or a positive integer with more than 2 digits. With the 'print' statement, the result is displayed on the screen. The 'sum' with 'range' functions wrapped together 'sum(range(i+1))' gives me the sum of all the numbers from zero up to the number entered, which saves a few lines of code where we don't have to use another 'while' or a 'for' loop with another variable to calculate the sum.
- 
-4. The 'if', 'elif' and 'else' statements: Like most other programming languages, the 'if' and 'else' statements are very similar in the context and used to evaluate a condition being true or false. The 'elif' statement saved me a few lines of code so instead of having multiple 'if' statements nested each one with its own 'else' statement, I used 'elif' statements to shorten the code and yet achieved the same result.
+The 'try' and 'except' block: I used it to catch and handle any exceptions such as any input that is not a positive integer less than 100 raises as error. The code runs as normal following the 'try' statement and if an exception is detected, the response to that exception is handled after the 'except' statement, which prints an error message. The code within the 'try-except' block is executed and user is asked to input a positive integer less than 100. This keeps repeating until the loop breaks at the 'break' statement when a number less than 100 is detected. The 'int', 'input', 'print', 'sum' and 'range' functions are also used. I used 'int' with 'input' functions to disallow certain characters, so restricting user to input integer numbers only. With the 'print' statement, the result is displayed on the screen. The 'sum' with 'range' functions wrapped together 'sum(range(i+1))' gives me the sum of all the numbers from zero up to the number entered. The 'if' and 'else' statements are also used to evaluate a condition being true or false.
 
 #### File Name: 
-1. sumupto-1a.py
+1. sumupto.py
 
 #### References:
-1. https://docs.python.org/3/tutorial/errors.html#handling-exceptions 
-2. https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
-3. https://docs.python.org/3/tutorial/controlflow.html#if-statements 
-4. https://www.quora.com/How-do-you-check-if-a-number-is-a-float-in-Python 
-5. https://www.youtube.com/watch?v=jlOyXjfxEOs 
-
-### Solution-1b
-This solution is a bit shorter. In this solution I disallow certain characters to be entered at a text prompt. I also used the followings Loops, Blocks and Statements;
-1. The ‘while’ loop: I started with a 'While' loop, because I wanted to loop back to the top of the code and continue asking a positive integer until it is achieved. Since 'True' always evaluates to True, my 'While' loop will run indefinitely and keeps asking a positive integer until one less than 99 is entered. I also limited my max entry for the positive integer number to 99, because in case user inputs a very large positive integer number (e.g. 123456789123456789), it can increase the load on the CPU and can lead to system crashes. I also used the 'continue' and 'break' statements. With 'continue', the rest of the code is not  executed, so it loops back to the top to the 'while' so it keeps asking a positive integer. This will repeat indefinitely until the loop breaks with a positive integer number less than 100. The 'break' statement stops the loop when a positive integer less than 100 is inputted.
-
-2. The 'try' and 'except' block: I used it to catch and handle any exceptions so any input that is not a positive integer less than 100 raises as error. The code runs as normal following the 'try' statement and if an exception is detected, the response to that exception is handled after the 'except' statement, which generally prints an error message. When the 'try' and 'except' block is finished executing the code, which means the code in the 'while True' is finished executing, the code within the 'try-except' block is executed again and user is asked to input a positive integer less than 100 again. This keeps repeating until the loop breaks at the 'break' statement when a number less than 100 is detected.
-
-3. The 'int', 'input', 'print', 'sum' and 'range' functions are also used. I used 'int' with 'input' functions to disallow certain characters at a text prompt, so restricting user to input integer numbers only. With the 'print' statement, the result is displayed on the screen. The 'sum' with 'range' functions wrapped together 'sum(range(i+1))' gives me the sum of all the numbers from zero up to the number entered, which saves a few lines of code where we don't have to use another 'while' or a 'for' loop with another variable to calculate the sum.
- 
-4. The 'if' and 'else' statements are also used. Like most other programming languages, the 'if' and 'else' statements are very similar in the context and used to evaluate a condition being true or false. Since it was a single ‘if’ and ‘else’ statement, I did not need to use ‘elif’ in this solution.
-
-#### File Name: 
-1. sumupto-1b.py
-
-#### References:
-1. https://docs.python.org/3/tutorial/errors.html#handling-exceptions 
+1. https://docs.python.org/3/tutorial/errors.html#handling-exceptions
 2. https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
 3. https://docs.python.org/3/tutorial/controlflow.html#if-statements  
 4. https://www.youtube.com/watch?v=jlOyXjfxEOs
 5. https://realpython.com/python-exceptions/
-
 
 ### Problem-2
 Write a program that outputs whether or not today is a day that begins with the letter T. An example of running this program on a Thursday is "Yes - today begins with a T.".
@@ -81,7 +55,6 @@ I used Python’s datetime module to get the current day into a variable 'Tday'.
 3. https://docs.python.org/3/library/datetime.html?highlight=strftime
 4. https://stackoverflow.com/questions/7108080/python-get-the-first-character-of-the-first-string-in-a-list
 
-
 ### Problem-3
 Write a program that prints all numbers between 1,000 and 10,000 that are divisible by 6 but not 12.
 
@@ -94,7 +67,6 @@ I used a simple 'for loop' with a range function to resolve the problem-3. In my
 #### References:
 1. https://docs.python.org/3/tutorial/controlflow.html#for-statements
 2. https://docs.python.org/3/tutorial/controlflow.html#the-range-function
-
 
 ### Problem-4
 Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation. At each step calculate the next value by taking the current value and, if it is even, divide it by two, but if it is odd, multiply it by three and add one. Have the program end if the current value is one.
@@ -118,7 +90,6 @@ The reason why the integer '1' is not allowed in my collatz sequence is because 
 5. https://docs.python.org/3/tutorial/errors.html#handling-exceptions
 6. https://stackoverflow.com/a/11758128
 
-
 ### Problem-5
 Write a program that asks the user to input a positive integer and tells the user whether or not the number is a prime.
 
@@ -141,12 +112,11 @@ I finally initiated a 'for' loop with an 'if' statement nested. This is where I 
 6. https://www.programiz.com/python-programming/examples/prime-number
 7. https://beginnersbook.com/2018/01/python-program-check-prime-or-not/
 
-
 ### Problem-6
 Write a program that takes a user input string and outputs every second word.
 
 ### Solution-6
-To resolve this problem, I used the str.split() and str.join() functions of the string data type. First I got user to input a sentence, then I got this sentence split by every second word starting from the index zero. This means that the sentence is split by the elements that have the even index numbers like 0, 2, 4, 6 etc. So those elements with odd index numbers dropped from the list e.g. 1, 3, 5, etc. Then, these remaining words with even index numbers are joined to make a new sentence but a single space between each word as before and no single or double quotation around the words. And finally the result as in the new sentence was display on the screen. 
+To resolve this problem, I used the str.split() and str.join() functions of the string data type. First I got user to input a sentence, then I got this sentence split by every second word starting from the index zero. This means that the sentence is split by the elements that have the even index numbers like 0, 2, 4, 6 etc. So those elements with odd index numbers dropped from the list e.g. 1, 3, 5, etc. Then, these remaining words with even index numbers are joined to make a new sentence but a single space between each word as before and no single or double quotation around the words. And finally the result as in the new sentence was display on the screen.
 
 I initialy started with a 'for' loop to check the lenght of the sentence and print only the even numbered words but that was more than 4 lines of code, where as this new solution is much shorter as i only use 2 lines of code with split and join both in a single line.  
 
@@ -161,7 +131,6 @@ I initialy started with a 'for' loop to check the lenght of the sentence and pri
 5. https://stackoverflow.com/a/47085609
 6. https://stackoverflow.com/a/12883445
 
-
 ### Problem-7
 Write a program that that takes a positive floating point number as input and outputs an approximation of its square root.
 
@@ -175,7 +144,7 @@ Within my While True (always true) loop, I used the 'try-except' block to catch 
 The goal of the Newton's square root approximation method is to calculate the approximate square root of the given number using the initial estimate given. There is also an accuracy constant of '0.01' used in the loop. This helps the accuracy of the square root as in how close we can get to the actual square root.
 
 Note: Instead of Newton's square root approximation method, python's the built-in 'math.sqrt( x )' function can be used by importing the math module first ('import math').
- 
+
 #### File Name: 
 1. squareroot.py
 
@@ -186,7 +155,6 @@ Note: Instead of Newton's square root approximation method, python's the built-i
 4. https://docs.python.org/3/tutorial/controlflow.html#if-statements
 5. https://stackoverflow.com/a/48438631
 6. https://www.rookieslab.com/posts/finding-square-root-using-guess-and-check-algorithm-in-python
-
 
 ### Problem-8
 Write a program that outputs today’s date and time in the format ”Monday, January 10th 2019 at 1:15pm”.
@@ -203,7 +171,7 @@ I then converted today's date and time into the format requested and printed on 
 7. %p = AM/PM, e.g. PM
 
 Note: I had to change the file name from'datetime.py' to 'datetime-1.py' as my python interpretor didn't like the first name as it generated error for the datetime module saying that the 'datetime' module has no attribute 'datetime'. So I changed the file name with number 1 at the end to resolve the issue.
- 
+
 #### File Name: 
 1. datetime-1.py
 
@@ -212,7 +180,6 @@ Note: I had to change the file name from'datetime.py' to 'datetime-1.py' as my p
 2. https://docs.python.org/3/library/datetime.html
 3. https://docs.python.org/3/tutorial/stdlib.html#dates-and-times
 4. http://exponential.io/blog/2015/02/24/how-to-test-on-variable-against-multiple-values-in-python/
-
 
 ### Problem-9
 Write a program that reads in a text file and outputs every second line. The program should take the filename from an argument on the command line.
@@ -225,7 +192,7 @@ step = constant 2 is the jump between line so starting from line zero, jump to e
 
 Finally using the 'print' function, every second line was printed on the screen. In order to remove those empty lines (e.g. 1, 3, 5, etc.) between the every second lines, I used the end="" function to remove them. If however, there was no file supplied through the command-line argument other than the python script file itself, I then jumped to the else statement and using the 'print' function, I displayed a message for the user to indicate that a single text file (other than the python script file) to be supplied and ended the program.
 Note: Because we used a 'with' function to access the file, we didn't need to close the file with the 'f.close()' command in our code as it was automatically closed at the end of the code when the result was achived and displayed on the screen.
- 
+
 #### File Name: 
 1. second.py
 
@@ -237,7 +204,6 @@ Note: Because we used a 'with' function to access the file, we didn't need to cl
 5. https://docs.python.org/3/library/sys.html?highlight=sys%20argv#sys.argv
 6. https://www.pythonforbeginners.com/system/python-sys-argv
 
-
 ### Problem-10
 Write a program that displays a plot of the functions x, x2 and 2x in the range [0, 4].
 
@@ -248,7 +214,7 @@ f(x^2) = y2 = x^2,
 f(2^x) = y3 = 2^x. 
 Using the 'plt' function of the 'matplotlib' package, I setup the plotting for those 3 functions. I also setup 2 pionts where these functions (y1, y2 and y3) will intersect and mark these point where they intersect with orange and blue colours. I turned on the grid line visibility to display both horizantal and vertical lines. I also setup the plot legends for each line and their locations purely for display purposes.
 Finally, I plotted these f(x), f(x^2) and f(2^x) functions (y1, y2 and y3) on a single graph using the line chart where their intersect points marked blue and orange.
- 
+
 #### File Name: 
 1. plotfunction.py
 
